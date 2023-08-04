@@ -10,9 +10,6 @@ WORKDIR /usr/src/app
 # Install the application's dependencies and necessary packages
 RUN apk update && apk add --no-cache curl tini cron
 
-# Install PM2 globally inside the container
-RUN npm install -g pm2
-
 # Copy package.json and package-lock.json (if available)
 COPY package.json package-lock.json ./
 
