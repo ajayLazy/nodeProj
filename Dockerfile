@@ -19,13 +19,7 @@ RUN npm ci --omit=dev
 # Copy the rest of the source files into the image.
 COPY . .
 COPY entrypoint.sh /usr/local/bin/
-COPY mycron /etc/cron.d/
 
-# Give execution rights on the cron job
-RUN chmod 0644 /etc/cron.d/mycron
-
-# Apply cron job
-RUN crontab /etc/cron.d/mycron
 
 # Expose the port that the application listens on.
 EXPOSE 3005
