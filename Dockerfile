@@ -34,4 +34,4 @@ EXPOSE 3005
 USER node
 
 # Run the application using PM2 runtime
-CMD ["tini", "--", "pm2-runtime", "start", "index.cjs"]
+CMD ["tini", "--", "/usr/local/bin/entrypoint.sh"]
