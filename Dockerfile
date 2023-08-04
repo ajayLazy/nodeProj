@@ -25,8 +25,5 @@ COPY . .
 # Expose the port that the application listens on.
 EXPOSE 3005
 
-# Run the application as a non-root user.
-USER node
-
 # Use PM2 to run the index.cjs file
 CMD ["pm2-runtime", "start", "index.cjs"]
