@@ -13,6 +13,9 @@ RUN apk update && apk add --no-cache curl tini cron
 # Install PM2 globally
 RUN npm install -g pm2
 
+# Dummy pm2 task to ensure it's installed
+RUN pm2 --version
+
 # Copy package.json and package-lock.json (if available)
 COPY package.json package-lock.json ./
 
