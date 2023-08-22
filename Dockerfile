@@ -13,7 +13,6 @@ RUN apk update && apk add --no-cache curl tini
 # Install PM2 globally
 RUN npm install -g pm2 && which pm2 && pm2 --version
 
-
 # Dummy pm2 task to ensure it's installed
 RUN pm2 --version
 
